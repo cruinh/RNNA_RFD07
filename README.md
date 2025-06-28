@@ -1,50 +1,34 @@
-# Welcome to your Expo app 👋
+## Intro
 
-This is an [Expo](https://expo.dev) project created with [`create-expo-app`](https://www.npmjs.com/package/create-expo-app).
+This is a simple mobile app listing all pokemon reported by `pokeapi.co/api/v2/pokemon`.  
 
-## Get started
+![preview image](https://raw.githubusercontent.com/cruinh/RNNA_RFD07/refs/heads/main/app_preview.png)
 
-1. Install dependencies
+The point of this project is to be used as a development target for speedrunning the initial creation of a fresh react native app, both for practice and for exploring basic differences between new major versions of react native.
 
-   ```bash
-   npm install
-   ```
+## Note
 
-2. Start the app
+To reiterate: this is a **completed** attempt at the speedrun described below.  To attempt a run yourself, all you need is a working, local react native development environment, an internet connection, and the rules.
 
-   ```bash
-   npx expo start
-   ```
+## Speedrun Rules
 
-In the output, you'll find options to open the app in a
+- use expo
+- use ONLY useState and useContext for state management
+- use pokeapi.co/api/v2/pokemon
+- 2 screens
+    1. a list of all pokemon pulled from the API
+        - implement infinite scroll (40 per page)
+        - implement pull-to-refresh
+        - list cells should contain just the name of the pokemon
+        - on-load the screen should pull the first 40 pokemon from the API
+    1. a second screen that shows the details for a single pokemon
+        - get pokemon number, sprites (front & back for each of default, female, shiny, and shiny female variants)
+        - get 'flavor text'
+        - display one flavor text entry at a time.  tap to cycle through available versions of the flavor text from diff games
+        - display all the sprites
+        - implement a scroll view so everything fits on the screen
+        - pull-to-refresh on the scroll view
 
-- [development build](https://docs.expo.dev/develop/development-builds/introduction/)
-- [Android emulator](https://docs.expo.dev/workflow/android-studio-emulator/)
-- [iOS simulator](https://docs.expo.dev/workflow/ios-simulator/)
-- [Expo Go](https://expo.dev/go), a limited sandbox for trying out app development with Expo
+## How to run
 
-You can start developing by editing the files inside the **app** directory. This project uses [file-based routing](https://docs.expo.dev/router/introduction).
-
-## Get a fresh project
-
-When you're ready, run:
-
-```bash
-npm run reset-project
-```
-
-This command will move the starter code to the **app-example** directory and create a blank **app** directory where you can start developing.
-
-## Learn more
-
-To learn more about developing your project with Expo, look at the following resources:
-
-- [Expo documentation](https://docs.expo.dev/): Learn fundamentals, or go into advanced topics with our [guides](https://docs.expo.dev/guides).
-- [Learn Expo tutorial](https://docs.expo.dev/tutorial/introduction/): Follow a step-by-step tutorial where you'll create a project that runs on Android, iOS, and the web.
-
-## Join the community
-
-Join our community of developers creating universal apps.
-
-- [Expo on GitHub](https://github.com/expo/expo): View our open source platform and contribute.
-- [Discord community](https://chat.expo.dev): Chat with Expo users and ask questions.
+You may wish to track your times running this exercise by using [LiveSplit](https://livesplit.org).  A set of splits for this program are provided in the `livesplit` folder at the root of the project. 
